@@ -1,6 +1,6 @@
 [
-{"name":"Tân cảng Sa Đéc","type":"cảng","address":"8Q94+FWH, Tân Khánh Đông, Sa Đéc, Đồng Tháp, Việt Nam","state":"Đồng Tháp","latitude":10.322126936894863,"longitude":105.75743764022943}
-,{"name":"Công ty Điện lực","type":"điện lực","address":"250 Đ. Nguyễn Huệ, Phường 2, TP. Cao Lãnh, Đồng Tháp, Việt Nam","state":"Đồng Tháp","latitude":10.459585861092737,"longitude":105.64105740675801}
-,{"name":"Công ty Cổ Phần Cấp nước","type":"công ty nước","address":"01 Tôn Đức Thắng, Phường 5, TP. Cao Lãnh, Đồng Tháp, Việt Nam","state":"Đồng Tháp","latitude":10.463096712266825,"longitude":105.63016822026543}
+{"name":"Tân cảng Sa Đéc","type":"cảng","image":"https://lh5.googleusercontent.com/p/AF1QipMW1M_6Y2hV1vuTlYHm42AmumS1SOGCPRdiVidX=w312-h192-p-k-no","address":"8Q94+FWH, Tân Khánh Đông, Sa Đéc, Đồng Tháp, Việt Nam","state":"Đồng Tháp","latitude":10.322126936894863,"longitude":105.75743764022943}
+,{"name":"Công ty Điện lực","type":"điện lực","image":"https://lh5.googleusercontent.com/p/AF1QipObHIGlSOdHUOk-Shil9S_T5-fWtfcaOdJwFjJI=w425-h240-k-no","address":"250 Đ. Nguyễn Huệ, Phường 2, TP. Cao Lãnh, Đồng Tháp, Việt Nam","state":"Đồng Tháp","latitude":10.459585861092737,"longitude":105.64105740675801}
+,{"name":"Công ty Cổ Phần Cấp nước","type":"công ty nước","image":"https://lh5.googleusercontent.com/p/AF1QipMWZoVyV5DuHDhHYbXX3ZAdauvq6CExRZqfRWAi=w408-h271-k-no","address":"01 Tôn Đức Thắng, Phường 5, TP. Cao Lãnh, Đồng Tháp, Việt Nam","state":"Đồng Tháp","latitude":10.463096712266825,"longitude":105.63016822026543}
 
 ]

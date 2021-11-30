@@ -5,14 +5,14 @@ function MarkerInfo(props) {
   const displayName = `${info.name}, ${info.state}`;
 
   return (
-    <div>
-      <div>
+    <div className='info'>
+      <div className='name'>
         {displayName}
       </div>
-      <div>
+      <div className='address'>
         Địa chỉ: {info.address}
       </div>
-      {/* <img width={240} src={info.image} /> */}
+      <img width={248} src={info.image} />
     </div>
   );
 }

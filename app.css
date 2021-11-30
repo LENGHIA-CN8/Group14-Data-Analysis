@@ -72,3 +72,13 @@ input {
   font-size: 17px;
   border: none;
 }
+div.address{
+  color: rgb(179, 173, 173);
+}
+div.name {
+  font-size: medium;
+  font-weight: bold;
+}
+div.info{
+  width: 250px;
+}
