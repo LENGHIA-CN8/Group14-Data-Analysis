@@ -5,8 +5,10 @@ import MapGL, { Source, Layer, Popup } from "@goongmaps/goong-map-react";
 
 import { dataLayer, fillLayer } from "./map-style.js";
 import MARKER from "../Marker.json";
+import PROVINCE_DATA from "../data.json";
 import Pins from "./Pin";
 import MarkerInfo from "./marker-info";
+import Modal from "./Popup.js";
 
 const GOONG_MAPTILES_KEY = "pUhXgHuCZYAftRhPuN8q8icCOaynIICbUTBFyrDE"; // Set your goong maptiles key here
 
@@ -25,6 +27,9 @@ export default function App() {
   const [allData, setAllData] = useState(null);
   const [hoverInfo, setHoverInfo] = useState(null);
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [clickInfo, setClickInfo] = useState();
+
   useEffect(() => {
     /* global fetch */
     fetch(
@@ -37,11 +42,11 @@ export default function App() {
 
   const querystringHandler = (findquery) => {
     setQuery(findquery);
-    console.log(querystring)    
+    console.log(querystring)
   }
 
   const search = (e) => {
-    console.log('hey')
+    console.log('InSearching')
     e.preventDefault();
     setRes(MARKER.filter((obj) => obj.type == querystring))
   };
@@ -52,23 +57,58 @@ export default function App() {
       srcEvent: { offsetX, offsetY },
     } = event;
     const hoveredFeature = features && features[0];
+    const defaultInfo = {
+      Name: hoveredFeature.properties.Name,
+      Population: 'Unknown'
+    }
+    const provinceInfo = PROVINCE_DATA.Information.find(data => data.Name === hoveredFeature.properties.Name) || defaultInfo;
 
     setHoverInfo(
       hoveredFeature
         ? {
-            feature: hoveredFeature,
-            x: offsetX,
-            y: offsetY,
-          }
+          provinceInfo,
+          x: offsetX,
+          y: offsetY,
+        }
         : null
     );
-    // console.log(hoverInfo);
   }, []);
+
+  const handleOnProvinceClick = (event) => {
+    const { features, srcEvent: { offsetX, offsetY } } = event;
+    const provinceName = features ? features[0].properties.Name : ''
+
+    console.log({ features, offsetX, offsetY });
+    setClickInfo(PROVINCE_DATA.Information.find(data => data.Name === provinceName));
+    setIsModalOpen(true);
+  }
+
+  const ModalContent = ({ clickInfo }) => (
+    <div>
+      {
+        clickInfo
+        && Object.entries(clickInfo).map(([key, val]) => (
+          <p>{`${key}: ${val}`}</p>
+        ))
+      }
+    </div>
+  );
 
   const data = allData;
 
   return (
     <>
+      {
+        isModalOpen
+        && (
+          <Modal
+            content={
+              <ModalContent clickInfo={clickInfo} />
+            }
+            handleClose={() => setIsModalOpen(false)}
+          />
+        )
+      }
       <MapGL
         {...viewport}
         width="100%"
@@ -78,6 +118,7 @@ export default function App() {
         goongApiAccessToken={GOONG_MAPTILES_KEY}
         interactiveLayerIds={["data-fill", "data-line"]} // related to map-style.js
         onHover={onHover}
+        onClick={handleOnProvinceClick}
       >
         <Pins data={res} onClick={setPopupInfo} />
         {popupInfo && (
@@ -98,22 +139,20 @@ export default function App() {
           <Layer {...dataLayer} />
         </Source>
         {hoverInfo && (
-          <div
-            className="tooltip"
-            style={{ left: hoverInfo.x, top: hoverInfo.y }}
-          >
-            <div>State: {hoverInfo.feature.properties.Name}</div>
-            <div>Information:</div>
+          <div className="tooltip" style={{ left: hoverInfo.x, top: hoverInfo.y }}>
+
+            <div>State: {hoverInfo.provinceInfo?.Name || ''}</div>
+            <div>Population: {hoverInfo.provinceInfo?.Population || ''}</div>
           </div>
         )}
         <div class="search-container">
-        <form>
-          <input type="text" placeholder="Search.." name="search" onChange={(e) => {querystringHandler(e.target.value)}}/>
-          <button onClick={(e) => {search(e)}}>
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
-      </div>
+          <form>
+            <input type="text" placeholder="Search.." name="search" onChange={(e) => { querystringHandler(e.target.value) }} />
+            <button onClick={(e) => { search(e) }}>
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
       </MapGL>
     </>
   );

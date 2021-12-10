@@ -1,0 +1,24 @@
+{
+	"Information":[
+		{
+			"Name": "Tien Giang",
+			"Population": "1.783.165",
+			"Note": "Đây là tỉnh Tiền Giang"
+		},
+		{
+			"Name": "Tra Vinh",
+			"Population": "1.009.168",
+			"Note": "Đây là tỉnh Trà Vinh"
+		},
+		{
+			"Name": "Vinh Long",
+			"Population": "1.022.619",
+			"Note": "Đây là tỉnh Vĩnh Long"
+		},
+		{
+			"Name": "Dong Thap",
+			"Population": "1.693.300",
+			"Note": "Đây là tỉnh Đồng Tháp"
+		}
+	]
+}
