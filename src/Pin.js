@@ -12,7 +12,7 @@ function Pins(props) {
   const {data, onClick} = props;
 
   return data && data.map((location, index) => (
-     <Marker key={`marker-${index}`} longitude={location.geometry.location.lng} latitude={location.geometry.location.lat}>
+     <Marker key={`marker-${index}`} longitude={location.longitude} latitude={location.latitude}>
         {/* <div className='name_pin'>{location.name}</div> */}
         {console.log('total', location)}
       <svg

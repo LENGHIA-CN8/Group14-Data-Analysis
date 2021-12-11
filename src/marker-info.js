@@ -10,7 +10,7 @@ function MarkerInfo(props) {
         {displayName}
       </div>
       <div className='address'>
-        Địa chỉ: {info.formatted_address}
+        Địa chỉ: {info.address}
       </div>
       {info.image && <img width={248} src={info.image} />}
     </div>
