@@ -10,7 +10,9 @@ import Pins from "./Pin";
 import MarkerInfo from "./marker-info";
 import Modal from "./Popup.js";
 
+
 const GOONG_MAPTILES_KEY = "pUhXgHuCZYAftRhPuN8q8icCOaynIICbUTBFyrDE"; // Set your goong maptiles key here
+const GOONG_KEY = "gpfhyElUCPDsvyc9ZN7qGiH60hsqHDrZLqyIHuSq";
 
 export default function App() {
   const [viewport, setViewport] = useState({
@@ -21,8 +23,9 @@ export default function App() {
     bearing: 0,
     pitch: 0,
   });
-  const [querystring, setQuery] = useState(null);
-  const [res, setRes] = useState(MARKER);
+  const [querystring, setQuery] = useState('cảng đồng tháp');
+  const [url, setURL] = useState(null);
+  const [res, setRes] = useState([]);
   const [popupInfo, setPopupInfo] = useState(null);
   const [allData, setAllData] = useState(null);
   const [hoverInfo, setHoverInfo] = useState(null);
@@ -39,6 +42,26 @@ export default function App() {
       .then((resp) => resp.json())
       .then((json) => setAllData(json));
   }, []);
+  useEffect(() => {
+      setRes([])
+      console.log(url)
+      querystring && fetch(
+        url
+      )
+      .then((resp) => resp.json())
+      .then((json) => json)
+      .then((j) => {
+        console.log(j.predictions)
+        j.predictions.map((x) => {
+          fetch("https://rsapi.goong.io/Place/Detail?place_id="+x.place_id+"&api_key="+GOONG_KEY)
+          .then((res) => res.json())
+          .then((json) => setRes(res => [...res,json.result]))
+          setTimeout(function(){
+          }, 1000); 
+        })
+      });
+  //     setplaceid(result)
+  }, [url]);
 
   const querystringHandler = (findquery) => {
     setQuery(findquery);
@@ -48,7 +71,8 @@ export default function App() {
   const search = (e) => {
     console.log('InSearching')
     e.preventDefault();
-    setRes(MARKER.filter((obj) => obj.type == querystring))
+    // setRes(MARKER.filter((obj) => obj.type == querystring))
+    setURL("https://rsapi.goong.io/Place/AutoComplete?api_key=gpfhyElUCPDsvyc9ZN7qGiH60hsqHDrZLqyIHuSq&input="+querystring)
   };
 
   const onHover = useCallback((event) => {
@@ -98,6 +122,7 @@ export default function App() {
 
   return (
     <>
+    {/* {console.log(res)} */}
       {
         isModalOpen
         && (
@@ -125,8 +150,8 @@ export default function App() {
           <Popup
             tipSize={5}
             anchor="top"
-            longitude={popupInfo.longitude}
-            latitude={popupInfo.latitude}
+            longitude={popupInfo.geometry.location.lng}
+            latitude={popupInfo.geometry.location.lat}
             closeOnClick={false}
             onClose={setPopupInfo}
           >
