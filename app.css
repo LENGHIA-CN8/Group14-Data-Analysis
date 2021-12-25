@@ -82,3 +82,17 @@ div.name {
 div.info{
   width: 250px;
 }
+.custom-select {
+  display: inline-block;
+  padding: 6px 10px 9px;
+  position: relative;
+  font-family: Arial;
+}
+select {
+  color: black;
+  width: 100px;
+  height: 25px;
+}
+
+
+
