@@ -13,6 +13,7 @@ import MarkerInfo from "./marker-info";
 import Modal from "./Popup.js";
 
 const GOONG_MAPTILES_KEY = "tmyyAd6dtIRTHH3RNODMx6RrrdMCT9lXELg2W7o0"; // Set your goong maptiles key here
+const GOONG_KEY = "gpfhyElUCPDsvyc9ZN7qGiH60hsqHDrZLqyIHuSq";
 
 export default function App() {
   const [viewport, setViewport] = useState({
@@ -23,8 +24,10 @@ export default function App() {
     bearing: 0,
     pitch: 0,
   });
-  const [querystring, setQuery] = useState(null);
-  const [res, setRes] = useState(MARKER);
+  const [querystring, setQuery] = useState("cảng đồng tháp");
+  const [url, setURL] = useState(null);
+  const [res, setRes] = useState([]);
+  // const [resfilter, setFilter] = useState([]);
   const [popupInfo, setPopupInfo] = useState(null);
   const [allData, setAllData] = useState(null);
   const [hoverInfo, setHoverInfo] = useState(null);
@@ -35,22 +38,66 @@ export default function App() {
   useEffect(() => {
     /* global fetch */
     fetch(
-      // "https://raw.githubusercontent.com/Vizzuality/growasia_calculator/master/public/vietnam.geojson"
       "../diaphantinhenglish.json"
     )
       .then((resp) => resp.json())
       .then((json) => setAllData(json));
   }, []);
+  useEffect(() => {
+    setRes([]);
+    console.log(url);
+    querystring &&
+      fetch(url)
+        .then((resp) => resp.json())
+        .then((json) => json)
+        .then((j) => {
+          console.log(j.predictions);
+          j.predictions.map((x) => {
+            fetch(
+              "https://rsapi.goong.io/Place/Detail?place_id=" +
+                x.place_id +
+                "&api_key=" +
+                GOONG_KEY
+            )
+              .then((res) => res.json())
+              .then((json) => {
+                let a = {};
+                a["latitude"] = json.result.geometry.location.lat;
+                a["longitude"] = json.result.geometry.location.lng;
+                a["name"] = json.result.name;
+                a["address"] = json.result.formatted_address;
+                setRes((res) => [...res, a]);
+              });
+            setTimeout(function () {}, 1000);
+          });
+          console.log("InSearching");
+          filter();
+        });
+  }, [url]);
 
   const querystringHandler = (findquery) => {
     setQuery(findquery);
     console.log(querystring);
   };
 
+  const filterstringHandler = (s) => {
+    // e.preventDefault();
+    console.log('EEEEEE',s)
+    setRes(MARKER.filter((obj) => obj.type == s))
+  }
+  const filter = () => {
+    const m = MARKER.filter((obj) => obj.type == querystring);
+    console.log("filter");
+    setRes((res) => [...res, ...m]);
+  };
+
   const search = (e) => {
-    console.log("InSearching");
     e.preventDefault();
-    setRes(MARKER.filter((obj) => obj.type == querystring));
+    // setRes(MARKER.filter((obj) => obj.type == querystring))
+    setURL(
+      "https://rsapi.goong.io/Place/AutoComplete?api_key=gpfhyElUCPDsvyc9ZN7qGiH60hsqHDrZLqyIHuSq&input=" +
+        querystring
+    );
   };
 
   const onHover = useCallback((event) => {
@@ -66,6 +113,7 @@ export default function App() {
     const provinceInfo =
       PROVINCE_DATA.Information.find(
         (data) => data.Name === hoveredFeature?.properties?.Name
+
       ) || defaultInfo;
 
     setHoverInfo(
@@ -106,6 +154,9 @@ export default function App() {
   // console.log(PROVINCE_DATA_OBJECT[`Tien Giang`]);
   return (
     <>
+
+      {/* {console.log(res)} */}
+
       {isModalOpen && (
         <Modal
           content={<ModalContent clickInfo={clickInfo} />}
@@ -148,6 +199,7 @@ export default function App() {
           >
             <div>State: {hoverInfo.provinceInfo?.Name || ""}</div>
             <div>Population: {hoverInfo.provinceInfo?.Population || ""}</div>
+
             {PROVINCE_DATA_OBJECT.hasOwnProperty(
               `${hoverInfo.provinceInfo?.Name}`
             ) && (
@@ -180,7 +232,7 @@ export default function App() {
             )}
           </div>
         )}
-        <div class="search-container">
+        <div className="search-container">
           <form>
             <input
               type="text"
@@ -195,9 +247,24 @@ export default function App() {
                 search(e);
               }}
             >
-              <i class="fa fa-search"></i>
+
+              <i className="fa fa-search"></i>
             </button>
           </form>
+        </div>
+        <div class="custom-select" >
+          <select onChange={(e) => {
+                filterstringHandler(e.target.value);
+              }}>
+            <option value={null}></option>
+            <option value={"cảng"}>Cảng</option>
+            <option value="điện lực">Điện lực</option>
+            <option value="cấp nước">Cấp nước</option>
+            <option value="xử lí nước thải">Xử lí nước thải</option>
+            <option value="bưu chính">Bưu chính</option>
+            <option value="khu công nghiệp">Khu công nghiệp</option>
+            <option value="trường học">Trường học</option>
+          </select>
         </div>
       </MapGL>
     </>
