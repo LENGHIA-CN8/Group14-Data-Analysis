@@ -46,7 +46,7 @@ export default function App() {
   }
 
   const search = (e) => {
-    console.log('InSearching')
+    console.log('hey')
     e.preventDefault();
     setRes(MARKER.filter((obj) => obj.type == querystring))
   };
@@ -72,6 +72,7 @@ export default function App() {
         }
         : null
     );
+    // console.log(hoverInfo);
   }, []);
 
   const handleOnProvinceClick = (event) => {
