@@ -38,9 +38,7 @@ export default function App() {
 
   useEffect(() => {
     /* global fetch */
-    fetch(
-      "../diaphantinhenglish.json"
-    )
+    fetch("../diaphantinhenglish.json")
       .then((resp) => resp.json())
       .then((json) => setAllData(json));
   }, []);
@@ -83,9 +81,9 @@ export default function App() {
 
   const filterstringHandler = (s) => {
     // e.preventDefault();
-    console.log('EEEEEE',s)
-    setRes(MARKER.filter((obj) => obj.type == s))
-  }
+    console.log("EEEEEE", s);
+    setRes(MARKER.filter((obj) => obj.type == s));
+  };
   const filter = () => {
     const m = MARKER.filter((obj) => obj.type == querystring);
     console.log("filter");
@@ -115,7 +113,6 @@ export default function App() {
     const provinceInfo =
       PROVINCE_DATA.Information.find(
         (data) => data.Name === hoveredFeature?.properties?.Name
-
       ) || defaultInfo;
 
     setHoverInfo(
@@ -156,7 +153,6 @@ export default function App() {
   // console.log(PROVINCE_DATA_OBJECT[`Tien Giang`]);
   return (
     <>
-
       {/* {console.log(res)} */}
 
       {isModalOpen && (
@@ -200,7 +196,7 @@ export default function App() {
             style={{ left: hoverInfo.x, top: hoverInfo.y }}
           >
             <div>State: {hoverInfo.provinceInfo?.Name || ""}</div>
-            <div>Population: {hoverInfo.provinceInfo?.Population || ""}</div>
+            {/* <div>Population: {hoverInfo.provinceInfo?.Population || ""}</div> */}
 
             {PROVINCE_DATA_OBJECT.hasOwnProperty(
               `${hoverInfo.provinceInfo?.Name}`
@@ -249,15 +245,16 @@ export default function App() {
                 search(e);
               }}
             >
-
               <i className="fa fa-search"></i>
             </button>
           </form>
         </div>
-        <div class="custom-select" >
-          <select onChange={(e) => {
-                filterstringHandler(e.target.value);
-              }}>
+        <div class="custom-select">
+          <select
+            onChange={(e) => {
+              filterstringHandler(e.target.value);
+            }}
+          >
             <option value={null}></option>
             <option value={"cảng"}>Cảng</option>
             <option value="điện lực">Điện lực</option>
