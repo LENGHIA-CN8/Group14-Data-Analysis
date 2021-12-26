@@ -66,19 +66,19 @@ input {
 .search-container button:hover {
   background: #ccc;
 }
-.search-container input[type=text] {
+.search-container input[type="text"] {
   padding: 6px 10px;
   margin-top: 8px;
   font-size: 17px;
   border: none;
 }
-div.address{
+div.address {
   color: rgb(179, 173, 173);
 }
 div.name {
   font-size: medium;
   font-weight: bold;
 }
-div.info{
+div.info {
   width: 250px;
 }
