@@ -14,7 +14,7 @@ function Pins(props) {
   return data && data.map((location, index) => (
      <Marker key={`marker-${index}`} longitude={location.longitude} latitude={location.latitude}>
         {/* <div className='name_pin'>{location.name}</div> */}
-        {console.log('total', location)}
+        {/* {console.log('total', location)} */}
       <svg
         height={SIZE}
         viewBox="0 0 24 24"
