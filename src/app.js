@@ -6,11 +6,13 @@ import MapGL, { Source, Layer, Popup } from "@goongmaps/goong-map-react";
 import { dataLayer, fillLayer } from "./map-style.js";
 import MARKER from "../Marker.json";
 import PROVINCE_DATA from "../data.json";
+import PROVINCE_DATA_OBJECT from "../data_object.json";
+
 import Pins from "./Pin";
 import MarkerInfo from "./marker-info";
 import Modal from "./Popup.js";
 
-const GOONG_MAPTILES_KEY = "pUhXgHuCZYAftRhPuN8q8icCOaynIICbUTBFyrDE"; // Set your goong maptiles key here
+const GOONG_MAPTILES_KEY = "tmyyAd6dtIRTHH3RNODMx6RrrdMCT9lXELg2W7o0"; // Set your goong maptiles key here
 const GOONG_KEY = "gpfhyElUCPDsvyc9ZN7qGiH60hsqHDrZLqyIHuSq";
 
 export default function App() {
@@ -105,12 +107,13 @@ export default function App() {
     } = event;
     const hoveredFeature = features && features[0];
     const defaultInfo = {
-      Name: hoveredFeature.properties.Name,
-      Population: "Unknown",
+      Name: hoveredFeature?.properties?.Name,
+      // Population: "Unknown",
     };
     const provinceInfo =
       PROVINCE_DATA.Information.find(
-        (data) => data.Name === hoveredFeature.properties.Name
+        (data) => data.Name === hoveredFeature?.properties?.Name
+
       ) || defaultInfo;
 
     setHoverInfo(
@@ -148,10 +151,12 @@ export default function App() {
   );
 
   const data = allData;
-
+  // console.log(PROVINCE_DATA_OBJECT[`Tien Giang`]);
   return (
     <>
+
       {/* {console.log(res)} */}
+
       {isModalOpen && (
         <Modal
           content={<ModalContent clickInfo={clickInfo} />}
@@ -194,6 +199,37 @@ export default function App() {
           >
             <div>State: {hoverInfo.provinceInfo?.Name || ""}</div>
             <div>Population: {hoverInfo.provinceInfo?.Population || ""}</div>
+
+            {PROVINCE_DATA_OBJECT.hasOwnProperty(
+              `${hoverInfo.provinceInfo?.Name}`
+            ) && (
+              <div>
+                <div>
+                  Diện tích toàn thành phố:
+                  {
+                    PROVINCE_DATA_OBJECT[`${hoverInfo.provinceInfo?.Name}`][
+                      "dien_tich"
+                    ]["toan_thanh_pho"]
+                  }
+                </div>
+                <div>
+                  Nhiệt độ trung bình:
+                  {
+                    PROVINCE_DATA_OBJECT[`${hoverInfo.provinceInfo?.Name}`][
+                      "khi_hau"
+                    ]["nhiet_do_trung_binh"]
+                  }
+                </div>
+                <div>
+                  Độ ẩm trung bình:
+                  {
+                    PROVINCE_DATA_OBJECT[`${hoverInfo.provinceInfo?.Name}`][
+                      "khi_hau"
+                    ]["do_am"]
+                  }
+                </div>
+              </div>
+            )}
           </div>
         )}
         <div className="search-container">
@@ -211,6 +247,7 @@ export default function App() {
                 search(e);
               }}
             >
+
               <i className="fa fa-search"></i>
             </button>
           </form>
