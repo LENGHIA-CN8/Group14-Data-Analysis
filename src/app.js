@@ -10,8 +10,8 @@ import Pins from "./Pin";
 import MarkerInfo from "./marker-info";
 import Modal from "./Popup.js";
 
-const GOONG_MAPTILES_KEY = "pUhXgHuCZYAftRhPuN8q8icCOaynIICbUTBFyrDE"; // Set your goong maptiles key here
-const GOONG_KEY = "gpfhyElUCPDsvyc9ZN7qGiH60hsqHDrZLqyIHuSq";
+const GOONG_MAPTILES_KEY = "Z3jztJRfohBKrS1I6025GaJUcCua1p9ZRiWN2Kku"; // Set your goong maptiles key here
+const GOONG_KEY = "YhE9WtgV0dscaDbxy2YQ6N3dIclw1AP8zirOvWqI";
 
 export default function App() {
   const [viewport, setViewport] = useState({
@@ -93,7 +93,7 @@ export default function App() {
     e.preventDefault();
     // setRes(MARKER.filter((obj) => obj.type == querystring))
     setURL(
-      "https://rsapi.goong.io/Place/AutoComplete?api_key=gpfhyElUCPDsvyc9ZN7qGiH60hsqHDrZLqyIHuSq&input=" +
+      "https://rsapi.goong.io/Place/AutoComplete?api_key="+GOONG_KEY+"&input" +
         querystring
     );
   };
