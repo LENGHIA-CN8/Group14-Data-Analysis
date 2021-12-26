@@ -1,132 +1,80 @@
 {
-  "Information": [
-    {
-      "Name": "Tien Giang",
-      "Population": "1.783.165",
-      "Note": "Đây là tỉnh Tiền Giang",
-      "dien_tich": {
-        "toan_thanh_pho": "2367 km2",
-        "dat_nong_nghiep": "178.124 ha",
-        "dat_lam_nghiep": "2.090 ha",
-        "dat_ngu_nghiep": "10.115 ha",
-        "dat_cong_nghiep_thuong_mai_dich_vu": "2.466 ha"
-      },
-      "khi_hau": {
-        "chung": "Tiền Giang mang tính chất nội chí tuyến - cận xích đạo và khí hậu nhiệt đới gió mùa nên nhiệt độ bình quân cao và nóng quanh năm.",
-        "nhiet_do_trung_binh": "27C - 27,9C",
-        "do_am": "80 - 85%/năm",
-        "luong_mua": "1.210 - 1.424 mm/năm"
-      },
-      "tinh_hinh_kinh_te": {
-        "tong_GDP": "82.682 tỉ VND",
-        "toc_do_tang_truong_GDP": "7.24%",
-        "GRDP_binh_quan_dau_nguoi": "46,90 triệu VND/người/năm",
-        "co_cau_cong_nghiep_xay_dung": "38.88%",
-        "co_cau_thuong_mai_dich_vu": "27.92%",
-        "co_cau_nong_lam_thuy_san": "29.5%",
-        "xuat_khau": "3.171.114.675 USD",
-        "nhap_khau": "1.690.809.797 USD",
-        "dau_tu_truc_tiep_nuoc_ngoai": {
-          "so_luong_doanh_nghiep_du_an": "128",
-          "tong_von_dau_tu": "2.752 triệu USD"
-        }
-      }
-    },
-    {
-      "Name": "Tra Vinh",
-      "Population": "1.009.168",
-      "Note": "Đây là tỉnh Trà Vinh",
-      "dien_tich": {
-        "toan_thanh_pho": "2215 km2",
-        "dat_nong_nghiep": "141.487 ha",
-        "dat_lam_nghiep": "6.862 ha",
-        "dat_ngu_nghiep": "36.564 ha",
-        "dat_cong_nghiep_thuong_mai_dich_vu": "809 ha"
-      },
-      "khi_hau": {
-        "chung": "Có điều kiện ánh sáng bức xạ dồi dào, nhiệt độ cao và ổn định, Tuy nhiên, do đặc thù của vùng khí hậu ven biển tỉnh Trà Vinh có một số hạn chế về mặt khí tượng như gió chướng mạnh, bốc hơi cao, mưa ít.",
-        "nhiet_do_trung_binh": "20 - 27 °C",
-        "do_am": "80%/năm",
-        "luong_mua": "1.400 - 1.600 mm/năm"
-      },
-      "tinh_hinh_kinh_te": {
-        "tong_GDP": "45.778 tỉ VND",
-        "toc_do_tang_truong_GDP": "9,56%",
-        "GRDP_binh_quan_dau_nguoi": "44,00 triệu VND/người/năm",
-        "co_cau_cong_nghiep_xay_dung": "39.61%",
-        "co_cau_thuong_mai_dich_vu": "25.38%",
-        "co_cau_nong_lam_thuy_san": "34.99%",
-        "xuat_khau": "360.624.381 USD",
-        "nhap_khau": "801.382.765 USD",
-        "dau_tu_truc_tiep_nuoc_ngoai": {
-          "so_luong_doanh_nghiep_du_an": "42",
-          "tong_von_dau_tu": "3.341 triệu USD"
-        }
-      }
-    },
-    {
-      "Name": "Vinh Long",
-      "Population": "1.022.619",
-      "Note": "Đây là tỉnh Vĩnh Long",
-      "dien_tich": {
-        "toan_thanh_pho": "1.475 km2",
-        "dat_nong_nghiep": "118.929 ha",
-        "dat_lam_nghiep": "0 ha",
-        "dat_ngu_nghiep": "892 ha",
-        "dat_cong_nghiep_thuong_mai_dich_vu": "1.165 ha"
-      },
-      "khi_hau": {
-        "chung": "Tỉnh Vĩnh Long nằm trong vùng khí hậu nhiệt đới gió mùa, chia làm 2 mùa rõ rệt là mùa mưa và mùa khô.",
-        "nhiet_do_trung_binh": "27 °C",
-        "do_am": "79,80%/năm",
-        "luong_mua": "1.400 - 1.450 mm/năm"
-      },
-      "tinh_hinh_kinh_te": {
-        "tong_GDP": "47.121 tỉ VND",
-        "toc_do_tang_truong_GDP": "6,17%",
-        "GRDP_binh_quan_dau_nguoi": "44,80 triệu vnd/người/năm",
-        "co_cau_cong_nghiep_xay_dung": "29.42%",
-        "co_cau_thuong_mai_dich_vu": "21.63%",
-        "co_cau_nong_lam_thuy_san": "43.92%",
-        "xuat_khau": "646.730.706 USD",
-        "nhap_khau": "234.198.390 USD",
-        "dau_tu_truc_tiep_nuoc_ngoai": {
-          "so_luong_doanh_nghiep_du_an": "67",
-          "tong_von_dau_tu": "845 triệu USD"
-        }
-      }
-    },
-    {
-      "Name": "Dong Thap",
-      "Population": "1.693.300",
-      "Note": "Đây là tỉnh Đồng Tháp",
-      "dien_tich": {
-        "toan_thanh_pho": "3238 km2",
-        "dat_nong_nghiep": "255.199 ha",
-        "dat_lam_nghiep": "11.092 ha",
-        "dat_ngu_nghiep": "10.745 ha",
-        "dat_cong_nghiep_thuong_mai_dich_vu": "1.684 ha"
-      },
-      "khi_hau": {
-        "chung": "Đồng Tháp nằm trong vùng khí hậu nhiệt đới, đồng nhất trên địa giới toàn tỉnh, khí hậu ở đây được chia làm 2 mùa rõ rệt là mùa mưa và mùa khô. Trong đó, mùa mưa thường bắt đầu từ tháng 5 đến tháng 11, mùa khô bắt đầu từ tháng 12 đến tháng 4 năm sau",
-        "nhiet_do_trung_binh": "27 °C",
-        "do_am": "82,50%/năm",
-        "luong_mua": "1.170-1.520 mm/năm"
-      },
-      "tinh_hinh_kinh_te": {
-        "tong_GDP": "67.732 tỉ VND",
-        "toc_do_tang_truong_GDP": "6,92%",
-        "GRDP_binh_quan_dau_nguoi": "40 triệu vnd/người/năm",
-        "co_cau_cong_nghiep_xay_dung": "36.21",
-        "co_cau_thuong_mai_dich_vu": "22.35",
-        "co_cau_nong_lam_thuy_san": "38.59",
-        "xuat_khau": "1.068.796.744",
-        "nhap_khau": "424.768.533",
-        "dau_tu_truc_tiep_nuoc_ngoai": {
-          "so_luong_doanh_nghiep_du_an": "20",
-          "tong_von_dau_tu": "197.14 triệu USD"
-        }
-      }
-    }
-  ]
+	"Information":[
+		{
+			"Name": "Tien Giang",
+			"Population": "1.783.165",
+			"Diện tích tự nhiên": "2.484,2 km²",
+			"Tọa độ": "10°12’ - 10°35’ vĩ độ Bắc và 105°49’ - 106°48’ kinh độ Đông",
+			"Địa hình": "Bằng phẳng, độ dốc nhỏ hơn 1% và cao trình biến thiên từ 0m đến 1,6m so với mặt nước biển",
+			"Dự án trong KKT, KCN, KCNC": "Cụm công nghiệp Thạnh Tân, Cụm công nghiệp Mỹ Lợi, Cụm công nghiệp Long Bình, Khu công nghiệp Long Giang",
+			"Dự án ngoài KKT, KCN, KCNC": "Đường số 4 và khu dân cư 2 bên đường, Khu dân cư - thương mại - dịch vụ Thân Đức",
+			"Giá điện": "914-2.908đ/kWh",
+			"Giá nước": "3.500-18.000đ/m3",
+			"Giá gas": "1.877.500 đồng/bình 45 kg",
+			"Giá thuê nhà xưởng": "Trung bình từ 220.000 - 2.000.000đ/m2",
+			"Giá thuê nhà ở": "Trung bình từ 6.000.000 - 25.000.000đ",
+			"Chi phí thi công nhà xưởng": "Từ 2.500.000 - 3.500.000đ/m2",
+			"Chi phí lao động": "4.180.000 - 4.300.000đ/người/tháng",
+			"Chi phí vận tải": "160.000 - 1.000.000đ/tấn",
+			"Chi phí xử lý chất thải": "3.600 - 12.000đ/m3",
+			"Note": "Đây là tỉnh Tiền Giang"
+		},
+		{
+			"Name": "Tra Vinh",
+			"Population": "1.009.168",
+			"Diện tích tự nhiên": "2.295,1 km²",
+			"Tọa độ": "9°31’ - 10°04’ vĩ độ Bắc và 105°57’ - 106°36’ kinh độ Đông",
+			"Địa hình": "Vùng trũng, phẳng xen lẫn các giồng cát, cao trình biến thiên của tỉnh từ 0,1 – 1m chiếm 66% diện tích tự nhiên",
+			"Dự án trong KKT, KCN, KCNC": "Nhà máy sản xuất các mặt hàng tiêu dùng Bảo Tiên, Khu dược phẩm công nghệ cao TV.Pharm, Khu nông nghiệp CNC Nông Trường Xanh, Làng khoa học công nghệ Green Logisics",
+			"Dự án ngoài KKT, KCN, KCNC": "Trung tâm thương mại và siêu thị Trà Vinh, Khu nhà ở xã hội tại khu tái định cư, dân cư và dịch vụ thương mại Phường 4, Trung tâm dịch vụ giải trí - mua sắm Mekong Center, Khu dịch vụ thương mại, văn hóa, du lịch Ao Bà Om",
+			"Giá điện": "914-2.908đ/kWh",
+			"Giá nước": "3.500-18.000đ/m3",
+			"Giá gas": "1.877.500 đồng/bình 45 kg",
+			"Giá thuê nhà xưởng": "Trung bình từ 300.000 - 3.200.000đ/m2",
+			"Giá thuê nhà ở": "Trung bình từ 2.700.000 - 20.000.000đ",
+			"Chi phí thi công nhà xưởng": "Từ 2.500.000 - 3.500.000đ/m2",
+			"Chi phí lao động": "4.180.000 - 4.300.000đ/người/tháng",
+			"Chi phí vận tải": "160.000 - 1.000.000đ/tấn",
+			"Chi phí xử lý chất thải": "3.600 - 12.000đ/m3",
+			"Note": "Đây là tỉnh Trà Vinh"
+		},
+		{
+			"Name": "Vinh Long",
+			"Population": "1.022.619",
+			"Diện tích tự nhiên": "1.479,1 km²",
+			"Tọa độ": "9°52’ - 10°19’ vĩ độ Bắc và 104°41’ - 106°17' kinh độ Đông",
+			"Địa hình": "Bằng phẳng, độ dốc nhỏ hơn 2 độ, cao trình < 1,0 m chiếm 62,85% diện tích",
+			"Dự án trong KKT, KCN, KCNC": "Khu công nghiệp Bình Tân, Khu công nghiệp An Định, Cụm công nghiệp TP. Vĩnh Long",
+			"Dự án ngoài KKT, KCN, KCNC": "Khu đô thị trung tâm hành chính tỉnh Vĩnh Long, Khu đô thị sinh thái nông nghiệp An Bình, Khu đô thị mới Mỹ Hòa, Khu đô thị sinh thái Cồn Chim",
+			"Giá điện": "914-2.908đ/kWh",
+			"Giá nước": "3.500-18.000đ/m3",
+			"Giá gas": "1.877.500 đồng/bình 45 kg",
+			"Giá thuê nhà xưởng": "Trung bình từ 250.000 - 1.000.000đ/m2",
+			"Giá thuê nhà ở": "Trung bình từ 1.600.000 - 15.000.000đ",
+			"Chi phí thi công nhà xưởng": "Từ 2.500.000 - 3.500.000đ/m2",
+			"Chi phí lao động": "4.180.000 - 4.300.000đ/người/tháng",
+			"Chi phí vận tải": "160.000 - 1.000.000đ/tấn",
+			"Chi phí xử lý chất thải": "3.600 - 12.000đ/m3",
+			"Note": "Đây là tỉnh Vĩnh Long"
+		},
+		{
+			"Name": "Dong Thap",
+			"Population": "1.693.300",
+			"Diện tích tự nhiên": "3.375,1 km²",
+			"Tọa độ": "10°07’ - 10°58’ vĩ độ Bắc và 105°12’ - 105°56' kinh độ Đông",
+			"Địa hình": "Bằng phẳng, hướng dốc Tây Bắc - Đông Nam",
+			"Dự án trong KKT, KCN, KCNC": "Khu công nghiệp Trần Quốc Toản, Khu công nghiệp Ba Sao, Khu công nghiệp Sông Hậu 2",
+			"Dự án ngoài KKT, KCN, KCNC": "Khu đô thị du lịch Sông Tiền, Khu đô thị du lịch nghỉ dưỡng Quốc tế Đông Giang, Khu di tích lịch sử - Văn hóa Bắc Dầu Quán Tre, Khu du lịch nghỉ dưỡng sinh thái bãi bồi Tân Thuận Đông",
+			"Giá điện": "914-2.908đ/kWh",
+			"Giá nước": "3.500-18.000đ/m3",
+			"Giá gas": "1.877.500 đồng/bình 45 kg",
+			"Giá thuê nhà xưởng": "Trung bình từ 150.000 - 1.000.000đ/m2",
+			"Giá thuê nhà ở": "Trung bình từ 1.500.000 - 15.000.000đ",
+			"Chi phí thi công nhà xưởng": "Từ 2.500.000 - 3.500.000đ/m2",
+			"Chi phí lao động": "4.180.000 - 4.300.000đ/người/tháng",
+			"Chi phí vận tải": "160.000 - 1.000.000đ/tấn",
+			"Chi phí xử lý chất thải": "3.600 - 12.000đ/m3",
+			"Note": "Đây là tỉnh Đồng Tháp"
+		}
+	]
 }

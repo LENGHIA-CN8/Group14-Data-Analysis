@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function MarkerInfo(props) {
   const {info} = props;
-  const displayName = `${info.name}`;
+  const displayName = `${info.name}, ${info.state}`;
 
   return (
     <div className='info'>
@@ -12,7 +12,7 @@ function MarkerInfo(props) {
       <div className='address'>
         Địa chỉ: {info.address}
       </div>
-      {info.image && <img width={248} src={info.image} />}
+      <img width={248} src={info.image} />
     </div>
   );
 }

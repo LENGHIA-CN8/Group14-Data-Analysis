@@ -34,7 +34,7 @@ const config = {
             options: BABEL_CONFIG
           }
         ]
-      },
+      }
     ]
   },
 
