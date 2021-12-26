@@ -14,7 +14,7 @@ import Modal from "./Popup.js";
 
 
 const GOONG_MAPTILES_KEY = "tmyyAd6dtIRTHH3RNODMx6RrrdMCT9lXELg2W7o0"; // Set your goong maptiles key here
-const GOONG_KEY = "gpfhyElUCPDsvyc9ZN7qGiH60hsqHDrZLqyIHuSq";
+const GOONG_KEY = "YhE9WtgV0dscaDbxy2YQ6N3dIclw1AP8zirOvWqI";
 
 export default function App() {
   const [viewport, setViewport] = useState({
@@ -69,7 +69,7 @@ export default function App() {
                 a["address"] = json.result.formatted_address;
                 setRes((res) => [...res, a]);
               });
-            setTimeout(function () {}, 1000);
+            setTimeout(function () {}, 10000);
           });
           console.log("InSearching");
           filter();
@@ -90,13 +90,14 @@ export default function App() {
     const m = MARKER.filter((obj) => obj.type == querystring);
     console.log("filter");
     setRes((res) => [...res, ...m]);
+    console.log(res)
   };
 
   const search = (e) => {
     e.preventDefault();
     // setRes(MARKER.filter((obj) => obj.type == querystring))
     setURL(
-      "https://rsapi.goong.io/Place/AutoComplete?api_key="+GOONG_KEY+"&input" +
+      "https://rsapi.goong.io/Place/AutoComplete?api_key="+GOONG_KEY+"&input=" +
         querystring
     );
   };
