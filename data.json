@@ -1,24 +1,132 @@
 {
-	"Information":[
-		{
-			"Name": "Tien Giang",
-			"Population": "1.783.165",
-			"Note": "Đây là tỉnh Tiền Giang"
-		},
-		{
-			"Name": "Tra Vinh",
-			"Population": "1.009.168",
-			"Note": "Đây là tỉnh Trà Vinh"
-		},
-		{
-			"Name": "Vinh Long",
-			"Population": "1.022.619",
-			"Note": "Đây là tỉnh Vĩnh Long"
-		},
-		{
-			"Name": "Dong Thap",
-			"Population": "1.693.300",
-			"Note": "Đây là tỉnh Đồng Tháp"
-		}
-	]
+  "Information": [
+    {
+      "Name": "Tien Giang",
+      "Population": "1.783.165",
+      "Note": "Đây là tỉnh Tiền Giang",
+      "dien_tich": {
+        "toan_thanh_pho": "2367 km2",
+        "dat_nong_nghiep": "178.124 ha",
+        "dat_lam_nghiep": "2.090 ha",
+        "dat_ngu_nghiep": "10.115 ha",
+        "dat_cong_nghiep_thuong_mai_dich_vu": "2.466 ha"
+      },
+      "khi_hau": {
+        "chung": "Tiền Giang mang tính chất nội chí tuyến - cận xích đạo và khí hậu nhiệt đới gió mùa nên nhiệt độ bình quân cao và nóng quanh năm.",
+        "nhiet_do_trung_binh": "27C - 27,9C",
+        "do_am": "80 - 85%/năm",
+        "luong_mua": "1.210 - 1.424 mm/năm"
+      },
+      "tinh_hinh_kinh_te": {
+        "tong_GDP": "82.682 tỉ VND",
+        "toc_do_tang_truong_GDP": "7.24%",
+        "GRDP_binh_quan_dau_nguoi": "46,90 triệu VND/người/năm",
+        "co_cau_cong_nghiep_xay_dung": "38.88%",
+        "co_cau_thuong_mai_dich_vu": "27.92%",
+        "co_cau_nong_lam_thuy_san": "29.5%",
+        "xuat_khau": "3.171.114.675 USD",
+        "nhap_khau": "1.690.809.797 USD",
+        "dau_tu_truc_tiep_nuoc_ngoai": {
+          "so_luong_doanh_nghiep_du_an": "128",
+          "tong_von_dau_tu": "2.752 triệu USD"
+        }
+      }
+    },
+    {
+      "Name": "Tra Vinh",
+      "Population": "1.009.168",
+      "Note": "Đây là tỉnh Trà Vinh",
+      "dien_tich": {
+        "toan_thanh_pho": "2215 km2",
+        "dat_nong_nghiep": "141.487 ha",
+        "dat_lam_nghiep": "6.862 ha",
+        "dat_ngu_nghiep": "36.564 ha",
+        "dat_cong_nghiep_thuong_mai_dich_vu": "809 ha"
+      },
+      "khi_hau": {
+        "chung": "Có điều kiện ánh sáng bức xạ dồi dào, nhiệt độ cao và ổn định, Tuy nhiên, do đặc thù của vùng khí hậu ven biển tỉnh Trà Vinh có một số hạn chế về mặt khí tượng như gió chướng mạnh, bốc hơi cao, mưa ít.",
+        "nhiet_do_trung_binh": "20 - 27 °C",
+        "do_am": "80%/năm",
+        "luong_mua": "1.400 - 1.600 mm/năm"
+      },
+      "tinh_hinh_kinh_te": {
+        "tong_GDP": "45.778 tỉ VND",
+        "toc_do_tang_truong_GDP": "9,56%",
+        "GRDP_binh_quan_dau_nguoi": "44,00 triệu VND/người/năm",
+        "co_cau_cong_nghiep_xay_dung": "39.61%",
+        "co_cau_thuong_mai_dich_vu": "25.38%",
+        "co_cau_nong_lam_thuy_san": "34.99%",
+        "xuat_khau": "360.624.381 USD",
+        "nhap_khau": "801.382.765 USD",
+        "dau_tu_truc_tiep_nuoc_ngoai": {
+          "so_luong_doanh_nghiep_du_an": "42",
+          "tong_von_dau_tu": "3.341 triệu USD"
+        }
+      }
+    },
+    {
+      "Name": "Vinh Long",
+      "Population": "1.022.619",
+      "Note": "Đây là tỉnh Vĩnh Long",
+      "dien_tich": {
+        "toan_thanh_pho": "1.475 km2",
+        "dat_nong_nghiep": "118.929 ha",
+        "dat_lam_nghiep": "0 ha",
+        "dat_ngu_nghiep": "892 ha",
+        "dat_cong_nghiep_thuong_mai_dich_vu": "1.165 ha"
+      },
+      "khi_hau": {
+        "chung": "Tỉnh Vĩnh Long nằm trong vùng khí hậu nhiệt đới gió mùa, chia làm 2 mùa rõ rệt là mùa mưa và mùa khô.",
+        "nhiet_do_trung_binh": "27 °C",
+        "do_am": "79,80%/năm",
+        "luong_mua": "1.400 - 1.450 mm/năm"
+      },
+      "tinh_hinh_kinh_te": {
+        "tong_GDP": "47.121 tỉ VND",
+        "toc_do_tang_truong_GDP": "6,17%",
+        "GRDP_binh_quan_dau_nguoi": "44,80 triệu vnd/người/năm",
+        "co_cau_cong_nghiep_xay_dung": "29.42%",
+        "co_cau_thuong_mai_dich_vu": "21.63%",
+        "co_cau_nong_lam_thuy_san": "43.92%",
+        "xuat_khau": "646.730.706 USD",
+        "nhap_khau": "234.198.390 USD",
+        "dau_tu_truc_tiep_nuoc_ngoai": {
+          "so_luong_doanh_nghiep_du_an": "67",
+          "tong_von_dau_tu": "845 triệu USD"
+        }
+      }
+    },
+    {
+      "Name": "Dong Thap",
+      "Population": "1.693.300",
+      "Note": "Đây là tỉnh Đồng Tháp",
+      "dien_tich": {
+        "toan_thanh_pho": "3238 km2",
+        "dat_nong_nghiep": "255.199 ha",
+        "dat_lam_nghiep": "11.092 ha",
+        "dat_ngu_nghiep": "10.745 ha",
+        "dat_cong_nghiep_thuong_mai_dich_vu": "1.684 ha"
+      },
+      "khi_hau": {
+        "chung": "Đồng Tháp nằm trong vùng khí hậu nhiệt đới, đồng nhất trên địa giới toàn tỉnh, khí hậu ở đây được chia làm 2 mùa rõ rệt là mùa mưa và mùa khô. Trong đó, mùa mưa thường bắt đầu từ tháng 5 đến tháng 11, mùa khô bắt đầu từ tháng 12 đến tháng 4 năm sau",
+        "nhiet_do_trung_binh": "27 °C",
+        "do_am": "82,50%/năm",
+        "luong_mua": "1.170-1.520 mm/năm"
+      },
+      "tinh_hinh_kinh_te": {
+        "tong_GDP": "67.732 tỉ VND",
+        "toc_do_tang_truong_GDP": "6,92%",
+        "GRDP_binh_quan_dau_nguoi": "40 triệu vnd/người/năm",
+        "co_cau_cong_nghiep_xay_dung": "36.21",
+        "co_cau_thuong_mai_dich_vu": "22.35",
+        "co_cau_nong_lam_thuy_san": "38.59",
+        "xuat_khau": "1.068.796.744",
+        "nhap_khau": "424.768.533",
+        "dau_tu_truc_tiep_nuoc_ngoai": {
+          "so_luong_doanh_nghiep_du_an": "20",
+          "tong_von_dau_tu": "197.14 triệu USD"
+        }
+      }
+    }
+  ]
 }
