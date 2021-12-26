@@ -203,7 +203,7 @@ export default function App() {
             ) && (
               <div>
                 <div>
-                  Diện tích toàn thành phố:
+                  Diện tích toàn thành phố:&nbsp;
                   {
                     PROVINCE_DATA_OBJECT[`${hoverInfo.provinceInfo?.Name}`][
                       "dien_tich"
@@ -211,7 +211,7 @@ export default function App() {
                   }
                 </div>
                 <div>
-                  Nhiệt độ trung bình:
+                  Nhiệt độ trung bình:&nbsp;
                   {
                     PROVINCE_DATA_OBJECT[`${hoverInfo.provinceInfo?.Name}`][
                       "khi_hau"
@@ -219,7 +219,7 @@ export default function App() {
                   }
                 </div>
                 <div>
-                  Độ ẩm trung bình:
+                  Độ ẩm trung bình:&nbsp;
                   {
                     PROVINCE_DATA_OBJECT[`${hoverInfo.provinceInfo?.Name}`][
                       "khi_hau"
